@@ -41,23 +41,3 @@ bash restore.sh ~/Desktop/gnome-visual-backup-*.tar.gz
 Ваша старая система вернётся ровно в то состояние, в котором была.
 
 ---
-
-## 📦 Как мне (автору) обновить тему в репозитории?
-
-Если вы поменяли обои или цвета в теме у себя на компьютере и хотите обновить этот репозиторий на GitHub:
-
-1. Создайте свежий архив своих текущих настроек командой:
-   ```bash
-   bash backup.sh ./
-   ```
-2. Скрипт создаст файл `gnome-visual-backup-XXXXXX.tar.gz`. Удали старый `my-theme.tar.gz` и переименуй новый:
-   ```bash
-   rm my-theme.tar.gz
-   mv gnome-visual-backup-*.tar.gz my-theme.tar.gz
-   ```
-3. Сделайте `git push` изменения в GitHub:
-   ```bash
-   git add my-theme.tar.gz
-   git commit -m "Update theme"
-   git push
-   ```
